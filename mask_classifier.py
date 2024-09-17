@@ -12,8 +12,6 @@ from PIL import Image
 import cv2
 import tensorflow_datasets as tfds
 
-from google.colab import drive
-drive.mount('/content/drive')
 
 """# Preprocessing
 
@@ -23,6 +21,7 @@ drive.mount('/content/drive')
 
 
 data_folder = "../Face Tracking with Masks/Data/experiements/data/"
+save_path = ''
 
 os.listdir(data_folder)
 
@@ -123,7 +122,7 @@ class ANN():
     return sum, len(y)
 
   def save_model(self, path):
-    model.save("../content/drive/My Drive/Kaggle Team/2021/Face Tracking with Masks/our_models/" + this.name + ".h5")
+    model.save(save_path + this.name + ".h5")
 
 
 
